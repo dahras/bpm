@@ -6,8 +6,8 @@ WORKDIR /app
 
 RUN cd /app \
   && yarn config set network-timeout 600000 -g \
-  && npx -y create-nocobase-app@${CNA_VERSION} my-nocobase-app --skip-dev-dependencies -a -e APP_ENV=production \
-  && cd /app/my-nocobase-app \
+  && npx -y create-docobase-app@${CNA_VERSION} my-docobase-app --skip-dev-dependencies -a -e APP_ENV=production \
+  && cd /app/my-docobase-app \
   && yarn install --production \
   && rm -rf yarn.lock \
   && find node_modules -type f -name "yarn.lock" -delete \
@@ -15,8 +15,8 @@ RUN cd /app \
   && find node_modules -type f -name "composer.json" -delete
 
 RUN cd /app \
-  && rm -rf nocobase.tar.gz \
-  && tar -zcf ./nocobase.tar.gz -C /app/my-nocobase-app .
+  && rm -rf docobase.tar.gz \
+  && tar -zcf ./docobase.tar.gz -C /app/my-docobase-app .
 
 FROM node:20-bookworm-slim
 
@@ -36,9 +36,9 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && apt-get update && apt-get install -y nginx libaio1
 
 RUN rm -rf /etc/nginx/sites-enabled/default
-COPY --from=builder /app/nocobase.tar.gz /app/nocobase.tar.gz
+COPY --from=builder /app/docobase.tar.gz /app/docobase.tar.gz
 
-WORKDIR /app/nocobase
+WORKDIR /app/docobase
 
 COPY docker-entrypoint.sh /app/
 # COPY docker-entrypoint.sh /usr/local/bin/

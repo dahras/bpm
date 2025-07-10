@@ -1,15 +1,15 @@
 version: "3"
 networks:
-  nocobase:
+  docobase:
     driver: bridge
 services:
   app:
-    image: nocobase/nocobase:latest
+    image: docobase/docobase:latest
     networks:
-      - nocobase
+      - docobase
     environment:
       - APP_KEY=your-secret-key # Replace it with your own app key
     volumes:
-      - ./storage:/app/nocobase/storage
+      - ./storage:/app/docobase/storage
     ports:
       - "13000:80"

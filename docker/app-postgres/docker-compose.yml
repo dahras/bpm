@@ -1,22 +1,22 @@
 version: "3"
 networks:
-  nocobase:
+  docobase:
     driver: bridge
 services:
   app:
-    image: nocobase/nocobase:latest
+    image: docobase/docobase:latest
     networks:
-      - nocobase
+      - docobase
     environment:
       - APP_KEY=your-secret-key # Replace it with your own app key
       - ENCRYPTION_FIELD_KEY=your-secret-key # Replace it with your own app key
       - DB_DIALECT=postgres
       - DB_HOST=postgres
-      - DB_DATABASE=nocobase
-      - DB_USER=nocobase
-      - DB_PASSWORD=nocobase
+      - DB_DATABASE=docobase
+      - DB_USER=docobase
+      - DB_PASSWORD=docobase
     volumes:
-      - ./storage:/app/nocobase/storage
+      - ./storage:/app/docobase/storage
     ports:
       - "13000:80"
     depends_on:
@@ -27,10 +27,10 @@ services:
     restart: always
     command: postgres -c wal_level=logical
     environment:
-      POSTGRES_USER: nocobase
-      POSTGRES_DB: nocobase
-      POSTGRES_PASSWORD: nocobase
+      POSTGRES_USER: docobase
+      POSTGRES_DB: docobase
+      POSTGRES_PASSWORD: docobase
     volumes:
       - ./storage/db/postgres:/var/lib/postgresql/data
     networks:
-      - nocobase
+      - docobase
