@@ -1,5 +1,5 @@
 {
-  "name": "create-nocobase-app",
+  "name": "create-docobase-app",
   "version": "1.8.1",
   "main": "src/index.js",
   "license": "AGPL-3.0",
@@ -12,12 +12,12 @@
     "tar": "^7.4.3"
   },
   "bin": {
-    "create-nocobase-app": "./bin/index.js"
+    "create-docobase-app": "./bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nocobase/nocobase.git",
-    "directory": "packages/core/create-nocobase-app"
+    "url": "git+https://github.com/docobase/docobase.git",
+    "directory": "packages/core/create-docobase-app"
   },
   "gitHead": "d0b4efe4be55f8c79a98a331d99d9f8cf99021a1"
 }

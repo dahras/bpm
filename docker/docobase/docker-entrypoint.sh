@@ -17,33 +17,33 @@ if [ -f /opt/instantclient_19_25.zip ] && [ ! -d /opt/instantclient_19_25 ]; the
   ldconfig
 fi
 
-if [ ! -d "/app/nocobase" ]; then
-  mkdir nocobase
+if [ ! -d "/app/docobase" ]; then
+  mkdir docobase
 fi
 
-if [ ! -f "/app/nocobase/package.json" ]; then
+if [ ! -f "/app/docobase/package.json" ]; then
   echo 'copying...'
-  tar -zxf /app/nocobase.tar.gz --absolute-names -C /app/nocobase
-  touch /app/nocobase/node_modules/@nocobase/app/dist/client/index.html
+  tar -zxf /app/docobase.tar.gz --absolute-names -C /app/docobase
+  touch /app/docobase/node_modules/@docobase/app/dist/client/index.html
 fi
 
-cd /app/nocobase && yarn nocobase create-nginx-conf
-cd /app/nocobase && yarn nocobase generate-instance-id
-rm -rf /etc/nginx/sites-enabled/nocobase.conf
-ln -s /app/nocobase/storage/nocobase.conf /etc/nginx/sites-enabled/nocobase.conf
+cd /app/docobase && yarn docobase create-nginx-conf
+cd /app/docobase && yarn docobase generate-instance-id
+rm -rf /etc/nginx/sites-enabled/docobase.conf
+ln -s /app/docobase/storage/docobase.conf /etc/nginx/sites-enabled/docobase.conf
 
 nginx
 echo 'nginx started';
 
 # run scripts in storage/scripts
-if [ -d "/app/nocobase/storage/scripts" ]; then
-  for f in /app/nocobase/storage/scripts/*.sh; do
+if [ -d "/app/docobase/storage/scripts" ]; then
+  for f in /app/docobase/storage/scripts/*.sh; do
     echo "Running $f"
     sh "$f"
   done
 fi
 
-cd /app/nocobase && yarn start --quickstart
+cd /app/docobase && yarn start --quickstart
 
 # Run command with node if the first argument contains a "-" or is not a system command. The last
 # part inside the "{}" is a workaround for the following bug in ash/dash:

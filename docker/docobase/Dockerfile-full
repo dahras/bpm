@@ -6,8 +6,8 @@ WORKDIR /app
 
 RUN cd /app \
   && yarn config set network-timeout 600000 -g \
-  && npx -y create-nocobase-app@${CNA_VERSION} my-nocobase-app --skip-dev-dependencies -a -e APP_ENV=production \
-  && cd /app/my-nocobase-app \
+  && npx -y create-docobase-app@${CNA_VERSION} my-docobase-app --skip-dev-dependencies -a -e APP_ENV=production \
+  && cd /app/my-docobase-app \
   && yarn install --production \
   && rm -rf yarn.lock \
   && find node_modules -type f -name "yarn.lock" -delete \
@@ -15,8 +15,8 @@ RUN cd /app \
   && find node_modules -type f -name "composer.json" -delete
 
 RUN cd /app \
-  && rm -rf nocobase.tar.gz \
-  && tar -zcf ./nocobase.tar.gz -C /app/my-nocobase-app .
+  && rm -rf docobase.tar.gz \
+  && tar -zcf ./docobase.tar.gz -C /app/my-docobase-app .
 
 FROM node:20-bookworm-slim
 
@@ -40,9 +40,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 RUN rm -rf /etc/nginx/sites-enabled/default
-COPY --from=builder /app/nocobase.tar.gz /app/nocobase.tar.gz
+COPY --from=builder /app/docobase.tar.gz /app/docobase.tar.gz
 
-RUN wget --no-check-certificate -O /opt/libreoffice24.8.zip https://static-docs.nocobase.com/libreoffice24.8.zip
+RUN wget --no-check-certificate -O /opt/libreoffice24.8.zip https://static-docs.docobase.com/libreoffice24.8.zip
 RUN wget --no-check-certificate -O /opt/instantclient_19_25.zip https://download.oracle.com/otn_software/linux/instantclient/1925000/instantclient-basic-linux.x64-19.25.0.0.0dbru.zip
 RUN wget --no-check-certificate https://downloads.mysql.com/archives/get/p/23/file/mysql-community-client-core_8.0.39-1debian12_amd64.deb && \
   dpkg -x mysql-community-client-core_8.0.39-1debian12_amd64.deb /tmp/mysql-client && \
@@ -50,7 +50,7 @@ RUN wget --no-check-certificate https://downloads.mysql.com/archives/get/p/23/fi
   cp /tmp/mysql-client/usr/bin/mysql /usr/bin/ && \
   rm mysql-community-client-core_8.0.39-1debian12_amd64.deb
 
-WORKDIR /app/nocobase
+WORKDIR /app/docobase
 
 COPY docker-entrypoint.sh /app/
 # COPY docker-entrypoint.sh /usr/local/bin/
