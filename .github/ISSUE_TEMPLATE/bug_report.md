@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a bug to help us improve. Please communicate in English, and post content in other languages to NocoBase Forum https://forum.nocobase.com/.
+about: Report a bug to help us improve. Please communicate in English, and post content in other languages to Docobase Forum https://forum.docobase.com/.
 title: ''
 labels: ''
 assignees: ''
@@ -12,7 +12,7 @@ First off, thank you for reporting bugs.
 
 Please do not clear the contents of the issue template. Items marked with * are required. Issues not filled out according to the template will be closed. 
 
-Please communicate in English, and post content in other languages to NocoBase Forum https://forum.nocobase.com/. Non-English issues will be closed.
+Please communicate in English, and post content in other languages to Docobase Forum https://forum.docobase.com/. Non-English issues will be closed.
 -->
 
 ## * Describe the bug
@@ -21,8 +21,8 @@ Please communicate in English, and post content in other languages to NocoBase F
 
 ## * Environment
 
-<!-- Please view it by clicking on the ? icon in the upper right corner of the NocoBase navigation bar. -->
-- NocoBase version:
+<!-- Please view it by clicking on the ? icon in the upper right corner of the Docobase navigation bar. -->
+- Docobase version:
 
 <!-- [e.g. PostgreSQL 12, MySQL 8.x, SQLite] -->
 - Database type and version: 
