@@ -322,7 +322,7 @@ async function generateChangelog(changelogs) {
 
 async function writeChangelog(cn, en, from, to) {
   const date = new Date().toISOString().split('T')[0];
-  const title = `## [${to}](https://github.com/nocobase/nocobase/compare/${from}...${to}) - ${date}`;
+  const title = `## [${to}](https://github.com/docobase/docobase/compare/${from}...${to}) - ${date}`;
   const write = async (lang) => {
     const file = lang === 'cn' ? 'CHANGELOG.zh-CN.md' : 'CHANGELOG.md';
     const oldChangelog = await fs.readFile(path.join(__dirname, `../../${file}`), 'utf8');
@@ -423,15 +423,15 @@ async function postCMS(tag, content, contentCN) {
     },
     data: {
       slug: tag,
-      title: `NocoBase ${tag}`,
-      title_cn: `NocoBase ${tag}`,
+      title: `Docobase ${tag}`,
+      title_cn: `Docobase ${tag}`,
       content,
       content_cn: contentCN,
       description: `Release Note of ${tag}`,
       description_cn: `${tag} 更新日志`,
       tags: [4],
       status: 'drafted',
-      author: 'nocobase [bot]',
+      author: 'docobase [bot]',
     },
   });
 }

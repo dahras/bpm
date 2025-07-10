@@ -51,12 +51,12 @@ RUN apt-get update && apt-get install -y nginx libaio1 \
   && rm -rf /var/lib/apt/lists/*
 RUN rm -rf /etc/nginx/sites-enabled/default
 
-COPY ./docker/nocobase/nocobase.conf /etc/nginx/sites-enabled/nocobase.conf
+COPY ./docker/docobase/nocobase.conf /etc/nginx/sites-enabled/nocobase.conf
 COPY --from=builder /app/nocobase.tar.gz /app/nocobase.tar.gz
 COPY --from=builder /tmp/commit_hash.txt /app/commit_hash.txt
 
 WORKDIR /app/nocobase
 
-COPY ./docker/nocobase/docker-entrypoint.sh /app/
+COPY ./docker/docobase/docker-entrypoint.sh /app/
 
 CMD ["/app/docker-entrypoint.sh"]

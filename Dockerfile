@@ -75,13 +75,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 RUN rm -rf /etc/nginx/sites-enabled/default
-COPY ./docker/nocobase/nocobase.conf /etc/nginx/sites-enabled/nocobase.conf
+COPY ./docker/docobase/nocobase.conf /etc/nginx/sites-enabled/nocobase.conf
 COPY --from=builder /app/nocobase.tar.gz /app/nocobase.tar.gz
 
 WORKDIR /app/nocobase
 
 RUN mkdir -p /app/nocobase/storage/uploads/ && echo "$COMMIT_HASH" >> /app/nocobase/storage/uploads/COMMIT_HASH
 
-COPY ./docker/nocobase/docker-entrypoint.sh /app/
+COPY ./docker/docobase/docker-entrypoint.sh /app/
 
 CMD ["/app/docker-entrypoint.sh"]

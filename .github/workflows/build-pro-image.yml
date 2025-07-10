@@ -20,7 +20,7 @@ on:
   #     - '**'
   #   paths:
   #     - 'packages/**'
-  #     - 'docker/nocobase/**'
+  #     - 'docker/docobase/**'
   #     - 'Dockerfile'
   #     - '.github/workflows/build-docker-image.yml'
 

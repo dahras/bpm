@@ -1,10 +1,10 @@
 Updated Date: April 1, 2025
 
-NocoBase License Agreement
+Docobase License Agreement
 
-NOCOBASE PTE. LTD.，a Singaporean Exempt Private Company Limited by Shares with its principal place of business located at #03-01 ROBINSON 112 ("The Company") https://www.nocobase.com/ issues this License Agreement ("Agreement") to you. You, as an individual or a company ("the User"), will be deemed to voluntarily accept all terms of this Agreement by using NocoBase (including but not limited to obtaining NocoBase source code or installation package in any form, installing and using NocoBase, purchasing NocoBase commercial license and services, purchasing NocoBase commercial plugins). If the User does not agree to any term of this Agreement, or cannot accurately understand our interpretation of the relevant terms, please stop using it immediately.
+NOCOBASE PTE. LTD.，a Singaporean Exempt Private Company Limited by Shares with its principal place of business located at #03-01 ROBINSON 112 ("The Company") https://www.docobase.com/ issues this License Agreement ("Agreement") to you. You, as an individual or a company ("the User"), will be deemed to voluntarily accept all terms of this Agreement by using Docobase (including but not limited to obtaining Docobase source code or installation package in any form, installing and using Docobase, purchasing Docobase commercial license and services, purchasing Docobase commercial plugins). If the User does not agree to any term of this Agreement, or cannot accurately understand our interpretation of the relevant terms, please stop using it immediately.
 
-This Agreement applies to any use, quotation, contract, invoice, and all software delivered by the Company. The User and the Company or NocoBase's agents can no longer sign a separate license agreement for the sale and delivery of the software.
+This Agreement applies to any use, quotation, contract, invoice, and all software delivered by the Company. The User and the Company or Docobase's agents can no longer sign a separate license agreement for the sale and delivery of the software.
 
 The Company reserves the right to formulate and modify this Agreement from time to time as needed. If there are changes, the Company will announce them in the form of website announcements, without further individual notification. The changed Agreement will automatically take effect once it is announced, becoming part of this Agreement.
 
@@ -12,7 +12,7 @@ The Company reserves the right to formulate and modify this Agreement from time 
 1. Definitions
 ==============
 
-1.1 "Software" refers to the NocoBase kernel and plugins placed in the same code repository as the kernel, including their source code, installation packages, images, and all their modifications, updates, and upgrades.
+1.1 "Software" refers to the Docobase kernel and plugins placed in the same code repository as the kernel, including their source code, installation packages, images, and all their modifications, updates, and upgrades.
 
 1.2 "Community Edition" refers to the free version of the Software provided to the User through public channels.
 
@@ -64,9 +64,9 @@ Except for Third-Party Open Source Software, the Company owns all copyrights, tr
 
 5.3 Outside the Marketplace, changes and plugins to the Software developed by the User or third parties, and third-party applications developed based on the Software must all be open-sourced under the AGPL-3.0 license.
 
-5.4 It is not allowed to remove or change the brand, name, link, version number, license, and other information about NocoBase on the Software interface, except for the main LOGO in the upper left corner of the page.
+5.4 It is not allowed to remove or change the brand, name, link, version number, license, and other information about Docobase on the Software interface, except for the main LOGO in the upper left corner of the page.
 
-5.5 It is not allowed to remove or change all intellectual property statements about NocoBase in the code.
+5.5 It is not allowed to remove or change all intellectual property statements about Docobase in the code.
 
 5.6 It is not allowed to provide any form of no-code, zero-code, low-code platform SaaS products to the public using the original or modified Software.
 
@@ -84,7 +84,7 @@ Except for Third-Party Open Source Software, the Company owns all copyrights, tr
 
 6.4 Changes and plugins to the Software, and applications integrated with the Software do not need to be open sourced.
 
-6.5 Can remove or change the brand, name, link, version number, license, and other information about NocoBase on the Software interface.
+6.5 Can remove or change the brand, name, link, version number, license, and other information about Docobase on the Software interface.
 
 6.6 Can sell plugins developed for Software in the Marketplace.
 
@@ -98,7 +98,7 @@ Except for Third-Party Open Source Software, the Company owns all copyrights, tr
 7. Obligations of Commercial License
 ====================================
 
-7.1 It is not allowed to remove or change all intellectual property statements about NocoBase in the code.
+7.1 It is not allowed to remove or change all intellectual property statements about Docobase in the code.
 
 7.2 It is not allowed to sell, transfer, lease, share, or distribute the Commercial License.
 
@@ -136,7 +136,7 @@ Except for Third-Party Open Source Software, the Company owns all copyrights, tr
 9. Obligations of Commercial Plugin License
 ===========================================
 
-9.1 It is not allowed to remove or change any intellectual property statements about NocoBase and the plugin authors in the code.
+9.1 It is not allowed to remove or change any intellectual property statements about Docobase and the plugin authors in the code.
 
 9.2 It is not allowed to sell, transfer, lease, share, or gift the Commercial Plugin.
 

@@ -3,22 +3,22 @@ const { exec } = require('child_process');
 
 const commercialLicense = `
 /**
- * This file is part of the NocoBase (R) project.
- * Copyright (c) 2020-2024 NocoBase Co., Ltd.
- * Authors: NocoBase Team.
+ * This file is part of the Docobase (R) project.
+ * Copyright (c) 2020-2024 Docobase Co., Ltd.
+ * Authors: Docobase Team.
  *
  * This program is offered under a commercial license.
- * For more information, see <https://www.nocobase.com/agreement>
+ * For more information, see <https://www.docobase.com/agreement>
  */
 `.trim();
 const openSourceLicense = `
 /**
- * This file is part of the NocoBase (R) project.
- * Copyright (c) 2020-2024 NocoBase Co., Ltd.
- * Authors: NocoBase Team.
+ * This file is part of the Docobase (R) project.
+ * Copyright (c) 2020-2024 Docobase Co., Ltd.
+ * Authors: Docobase Team.
  *
- * This project is dual-licensed under AGPL-3.0 and NocoBase Commercial License.
- * For more information, please refer to: https://www.nocobase.com/agreement.
+ * This project is dual-licensed under AGPL-3.0 and Docobase Commercial License.
+ * For more information, please refer to: https://www.docobase.com/agreement.
  */
 `.trim();
 

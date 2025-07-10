@@ -209,7 +209,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./docker/nocobase
+          context: ./docker/docobase
           build-args: |
             CNA_VERSION=${{ steps.get-info.outputs.cnaVersion }}
           platforms: linux/amd64,linux/arm64
@@ -218,8 +218,8 @@ jobs:
       - name: Build and push (Full)
         uses: docker/build-push-action@v3
         with:
-          context: ./docker/nocobase
-          file: ./docker/nocobase/Dockerfile-full
+          context: ./docker/docobase
+          file: ./docker/docobase/Dockerfile-full
           build-args: |
             CNA_VERSION=${{ steps.get-info.outputs.cnaVersion }}
           platforms: linux/amd64,linux/arm64
