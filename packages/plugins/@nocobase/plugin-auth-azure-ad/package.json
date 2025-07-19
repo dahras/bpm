@@ -1,0 +1,25 @@
+{
+  "name": "@nocobase/plugin-auth-azure-ad",
+  "version": "1.8.1",
+  "main": "./dist/server/index.js",
+  "displayName": "Auth: Microsoft Entra ID",
+  "displayName.zh-CN": "认证：Microsoft Entra ID",
+  "description": "Authenticate users using Microsoft Entra ID (Azure AD) and sync users via Microsoft Graph.",
+  "description.zh-CN": "通过 Microsoft Entra ID (Azure AD) 认证用户，并通过 Microsoft Graph 同步用户。",
+  "devDependencies": {
+    "@azure/msal-node": "^3.5.0"
+  },
+  "peerDependencies": {
+    "@nocobase/actions": "1.x",
+    "@nocobase/auth": "1.x",
+    "@nocobase/client": "1.x",
+    "@nocobase/database": "1.x",
+    "@nocobase/plugin-auth": "1.x",
+    "@nocobase/server": "1.x",
+    "@nocobase/test": "1.x"
+  },
+  "keywords": [
+    "Authentication",
+    "AzureAD"
+  ]
+}
