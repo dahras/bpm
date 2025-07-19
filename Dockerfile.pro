@@ -8,7 +8,7 @@ ARG PLUGINS_DIRS
 ENV PLUGINS_DIRS=${PLUGINS_DIRS}
 
 
-RUN npx npm-cli-adduser --username test --password test -e test@docobase.com -r $VERDACCIO_URL
+RUN npx npm-cli-adduser --username test --password test -e test@nocobase.com -r $VERDACCIO_URL
 
 RUN apt-get update && apt-get install -y jq
 WORKDIR /tmp
